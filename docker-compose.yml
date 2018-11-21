@@ -1,0 +1,53 @@
+#------------------------------------------------------------------------------
+# Portions of this file are Copyright (C)2018 Robert Cowart
+# 
+# Portions of this file are subject to the Robert Cowart Public License (the
+# "License") and may not be used or distributed except in compliance with the
+# License. You may obtain a copy of the License at:
+# 
+# http://www.koiossian.com/public/robert_cowart_public_license.txt
+# 
+# Software distributed under the License is distributed on an "AS IS" basis,
+# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+# the specific language governing rights and limitations under the License.
+# 
+# The Original Source Code was developed by Robert Cowart. Portions created by
+# Robert Cowart are Copyright (C)2018 Robert Cowart. All Rights Reserved.
+#------------------------------------------------------------------------------
+
+version: '3'
+services:
+  samplicator-netflow:
+    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    container_name: samplicator-netflow
+    restart: unless-stopped
+    network_mode: host
+    command: -s 0.0.0.0 -p 2055 -d 0 192.0.2.11/2055 192.0.2.12/2055
+
+  samplicator-ipfix:
+    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    container_name: samplicator-ipfix
+    restart: unless-stopped
+    network_mode: host
+    command: -s 0.0.0.0 -p 4739 -d 0 192.0.2.11/4739 192.0.2.12/4739
+    
+  samplicator-sflow:
+    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    container_name: samplicator-sflow
+    restart: unless-stopped
+    network_mode: host
+    command: -s 0.0.0.0 -p 6343 -d 0 192.0.2.11/6343 192.0.2.12/6343
+
+  samplicator-syslog:
+    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    container_name: samplicator-syslog
+    restart: unless-stopped
+    network_mode: host
+    command: -s 0.0.0.0 -p 514 -d 0 192.0.2.11/514 192.0.2.12/514
+
+  samplicator-snmptrap:
+    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    container_name: samplicator-snmptrap
+    restart: unless-stopped
+    network_mode: host
+    command: -s 0.0.0.0 -p 162 -d 0 192.0.2.11/162 192.0.2.12/162
