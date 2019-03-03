@@ -4,8 +4,6 @@ A Docker Container for Samplicator (https://github.com/sleinen/samplicator)
 Samplicator can be used to forward UDP packets to multiple destinations.
 
 # Usage
-
-
 The usage convention for samplicator is...
 
 ```
@@ -56,3 +54,8 @@ source.
 
 # Starting Samplicator with docker-compose
 The included `docker-compose.yml` file provides examples of using samplicator to forward Netflow, IPFIX, sFlow, Syslog and SNMP Traps.
+
+# License
+The code to build and run samplicator as a container is released under Apache License Version 2.0, January 2004.
+
+Samplicator itself is released under GNU General Public License v2.0.

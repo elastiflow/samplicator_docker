@@ -1,18 +1,17 @@
 #------------------------------------------------------------------------------
-# Portions of this file are Copyright (C)2018 Robert Cowart
-# 
-# Portions of this file are subject to the Robert Cowart Public License (the
-# "License") and may not be used or distributed except in compliance with the
-# License. You may obtain a copy of the License at:
-# 
-# http://www.koiossian.com/public/robert_cowart_public_license.txt
-# 
-# Software distributed under the License is distributed on an "AS IS" basis,
-# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
-# the specific language governing rights and limitations under the License.
-# 
-# The Original Source Code was developed by Robert Cowart. Portions created by
-# Robert Cowart are Copyright (C)2018 Robert Cowart. All Rights Reserved.
+# Copyright 2019 Robert Cowart
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #------------------------------------------------------------------------------
 
 FROM alpine:3.8
@@ -32,7 +31,7 @@ LABEL org.opencontainers.image.created="${BUILD_DATE}" \
 
 RUN apk add --update build-base automake autoconf git && \
     git config --global http.sslVerify false && \
-    git clone https://github.com/sleinen/samplicator.git && \
+    git clone https://github.com/robcowart/samplicator.git && \
     cd samplicator && \
     git checkout -b 1.3.8rc1 && \
     ./autogen.sh && \
