@@ -7,7 +7,7 @@ Samplicator can be used to forward UDP packets to multiple destinations.
 The usage convention for samplicator is...
 
 ```
-$ sudo docker run -it --network host robcowart/samplicator:1.0.0_1.3.8rc1 [<option>...] [<destination>...]
+$ sudo docker run -it --network host robcowart/samplicator:1.0.1_1.3.8rc1 [<option>...] [<destination>...]
 ```
 
 The allowed `<option>`s are...
