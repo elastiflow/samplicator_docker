@@ -44,35 +44,35 @@ services:
   # The following services are examples for forwarding common UDP packets to multiple sources.
   
   samplicator-netflow:
-    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    image: robcowart/samplicator:1.0.1_1.3.8rc1
     container_name: samplicator-netflow
     restart: unless-stopped
     network_mode: host
     command: -s 0.0.0.0 -p 2055 -S -d 0 192.0.2.11/2055 192.0.2.12/2055
 
   samplicator-ipfix:
-    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    image: robcowart/samplicator:1.0.1_1.3.8rc1
     container_name: samplicator-ipfix
     restart: unless-stopped
     network_mode: host
     command: -s 0.0.0.0 -p 4739 -S -d 0 192.0.2.11/4739 192.0.2.12/4739
     
   samplicator-sflow:
-    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    image: robcowart/samplicator:1.0.1_1.3.8rc1
     container_name: samplicator-sflow
     restart: unless-stopped
     network_mode: host
     command: -s 0.0.0.0 -p 6343 -S -d 0 192.0.2.11/6343 192.0.2.12/6343
 
   samplicator-syslog:
-    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    image: robcowart/samplicator:1.0.1_1.3.8rc1
     container_name: samplicator-syslog
     restart: unless-stopped
     network_mode: host
     command: -s 0.0.0.0 -p 514 -S -d 0 192.0.2.11/514 192.0.2.12/514
 
   samplicator-snmptrap:
-    image: robcowart/samplicator:1.0.0_1.3.8rc1
+    image: robcowart/samplicator:1.0.1_1.3.8rc1
     container_name: samplicator-snmptrap
     restart: unless-stopped
     network_mode: host

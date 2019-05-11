@@ -14,4 +14,4 @@
 # limitations under the License.
 #------------------------------------------------------------------------------
 
-docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') -t robcowart/samplicator:1.0.0_1.3.8rc1 .
+docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --squash -t robcowart/samplicator:1.0.1_1.3.8rc1 .

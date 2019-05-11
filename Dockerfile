@@ -14,7 +14,7 @@
 # limitations under the License.
 #------------------------------------------------------------------------------
 
-FROM alpine:3.8
+FROM alpine:3.9.4
 
 ARG BUILD_DATE
 
@@ -23,8 +23,8 @@ LABEL org.opencontainers.image.created="${BUILD_DATE}" \
       org.opencontainers.image.url="https://github.com/robcowart/samplicator_docker" \
       org.opencontainers.image.documentation="https://github.com/robcowart/samplicator_docker/README.md" \
       org.opencontainers.image.source="https://github.com/robcowart/samplicator_docker" \
-      org.opencontainers.image.version="1.0.0_1.3.8rc1" \
-      org.opencontainers.image.revision="https://github.com/robcowart/samplicator_docker/tree/1.0.0_1.3.8rc1" \
+      org.opencontainers.image.version="1.0.1_1.3.8rc1" \
+      org.opencontainers.image.revision="https://github.com/robcowart/samplicator_docker/tree/1.0.1_1.3.8rc1" \
       org.opencontainers.image.vendor="Robert Cowart" \
       org.opencontainers.image.title="samplicator" \
       org.opencontainers.image.description=""
