@@ -1,5 +1,5 @@
 #------------------------------------------------------------------------------
-# Copyright 2019 Robert Cowart
+# Copyright 2021 ElastiFlow Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,24 +14,24 @@
 # limitations under the License.
 #------------------------------------------------------------------------------
 
-FROM alpine:3.9.4
+FROM alpine:3.13.5
 
 ARG BUILD_DATE
 
 LABEL org.opencontainers.image.created="${BUILD_DATE}" \
-      org.opencontainers.image.authors="rob@koiossian.com" \
-      org.opencontainers.image.url="https://github.com/robcowart/samplicator_docker" \
-      org.opencontainers.image.documentation="https://github.com/robcowart/samplicator_docker/README.md" \
-      org.opencontainers.image.source="https://github.com/robcowart/samplicator_docker" \
+      org.opencontainers.image.authors="engelastiflow@elastiflow.com" \
+      org.opencontainers.image.url="https://github.com/elastiflow/samplicator_docker" \
+      org.opencontainers.image.documentation="https://github.com/elastiflow/samplicator_docker/README.md" \
+      org.opencontainers.image.source="https://github.com/elastiflow/samplicator_docker" \
       org.opencontainers.image.version="1.0.1_1.3.8rc1" \
-      org.opencontainers.image.revision="https://github.com/robcowart/samplicator_docker/tree/1.0.1_1.3.8rc1" \
-      org.opencontainers.image.vendor="Robert Cowart" \
+      org.opencontainers.image.revision="https://github.com/elastiflow/samplicator_docker/tree/1.0.1_1.3.8rc1" \
+      org.opencontainers.image.vendor="ElastiFlow Inc." \
       org.opencontainers.image.title="samplicator" \
-      org.opencontainers.image.description=""
+      org.opencontainers.image.description="Samplicator can be used to forward UDP packets to multiple destinations."
 
 RUN apk add --update build-base automake autoconf git && \
     git config --global http.sslVerify false && \
-    git clone https://github.com/robcowart/samplicator.git && \
+    git clone https://github.com/elastiflow/samplicator.git && \
     cd samplicator && \
     git checkout -b 1.3.8rc1 && \
     ./autogen.sh && \

@@ -1,5 +1,5 @@
 #------------------------------------------------------------------------------
-# Copyright 2019 Robert Cowart
+# Copyright 2021 ElastiFlow Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,4 +14,4 @@
 # limitations under the License.
 #------------------------------------------------------------------------------
 
-docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --squash -t robcowart/samplicator:1.0.1_1.3.8rc1 .
+docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --no-cache -t elastiflow/samplicator:1.0.1_1.3.8rc1 .
